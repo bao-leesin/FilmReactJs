@@ -1,0 +1,45 @@
+@import 'normalize.css';
+
+
+:root {
+    --primary: yellow;
+    --margin-left-right: 13%;
+    --white: white;
+    --black: black;
+
+    //Default-layout:
+
+    --default-space: 50px;
+}
+
+html{
+   font-family: 'Courier New', Courier, monospace;
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+//Font
+
+// @font-face {
+//     font-family: ;
+//     src: url();
+// }
+
+body{
+    line-height: 1.5;
+    min-height: 5000px;
+}
+
+button,a{
+    background-color: white ;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+

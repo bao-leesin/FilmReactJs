@@ -1,0 +1,57 @@
+.wrapper{
+    // display: flex;
+    // flex-direction: row;
+   
+    width: 100%;
+    position: relative;
+    div{
+        width: 100%;
+    }
+}
+
+.suggestion-label{
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.search-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    .clear{
+        position: absolute;
+        top: 40%;
+        right: 16px;
+    }
+}
+
+.search{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    outline: none;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 2px solid #ddd;
+   
+ }
+
+.search::placeholder{
+     align-content: center;
+     font-size: large;
+ }
+//focus vao khong doi mau, them transaction vào .search thi khi bỏ focus sẽ đổi
+.search:focus{
+    border: 2px solid var(--primary);
+}
+
+input :focus-visible{
+    outline-offset: 0px;
+}
+// .search-btn{
+//     flex-basis: 20%;
+// }
+

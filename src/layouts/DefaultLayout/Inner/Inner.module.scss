@@ -1,0 +1,56 @@
+.wrapper{
+    margin-left: calc(-1 * var(--default-space)) ;
+    margin-top: 100px;
+}
+
+.guild-list{    
+    display: grid;
+    width: 100%;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+}
+
+
+.item{
+    display: flex;
+    flex-direction: column;
+    padding-left: var(--default-space);
+    margin-bottom: 40px;
+   
+  
+}
+
+//ảnh bị dài ra khi responsive do chữ xuống dòng, vẫn chưa biết làm sao
+.item-img {
+    height: 100%;
+    position: relative;
+    margin-top: 13px;
+    img{
+        height: 100%;
+        width: 100%;
+        opacity: 1;
+        box-shadow: 0 3px 5px rgb(0 0 0 / 10%);
+        transition: box-shadow .25s ease-in-out,opacity;
+        vertical-align: middle;
+    }
+}
+
+.item-content{
+    display: block;
+    justify-content: center;
+    margin-top: 13px;
+    font-size: 14px;
+   
+}
+
+@media (max-width: 576px)
+{.guild-list {
+    display: flex;
+    flex-direction: column;
+   
+}
+.item{
+    flex: 0 0 auto;
+    width: 100%;
+}
+}
+
