@@ -9,10 +9,11 @@
     }
 }
 
-.suggestion-label{
-  font-size: 16px;
-  font-weight: bold;
-  text-align: center;
+.suggestion{
+    height: 100px;
+    div{
+    max-height: 100px;
+    }
 }
 
 .search-container{

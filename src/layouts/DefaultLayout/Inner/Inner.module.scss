@@ -1,12 +1,14 @@
 .wrapper{
-    margin-left: calc(-1 * var(--default-space)) ;
-    margin-top: 100px;
+    display: flex;
+    flex-direction: column;    
+    flex-basis: 80%;
 }
 
 .guild-list{    
+    margin-left: calc(-1 * var(--default-space)) ;
     display: grid;
     width: 100%;
-    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-columns: 35% 35% 35%;
 }
 
 
@@ -14,9 +16,8 @@
     display: flex;
     flex-direction: column;
     padding-left: var(--default-space);
+    margin-top: 100px;
     margin-bottom: 40px;
-   
-  
 }
 
 //ảnh bị dài ra khi responsive do chữ xuống dòng, vẫn chưa biết làm sao

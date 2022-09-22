@@ -1,8 +1,7 @@
+import Header from "../../layouts/components/Header"
+
 function Home() {
-    return <h2> 
-    Home
-   </h2>
-    
+    return (<Header/>)
 }
 
 export default Home

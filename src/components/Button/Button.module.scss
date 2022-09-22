@@ -1,9 +1,9 @@
 .wrapper{
-  color: white;
-  background-color: rgb(0, 0, 0);
-  white-space: nowrap;
+  color: rgb(0, 0, 0);
+  background-color: transparent;
   width: 100%;
-  
+  border: none;
+  outline: none;
 }
 
 .loginBtn:hover{
@@ -35,13 +35,27 @@
 .disabled{
   pointer-events: none;
   opacity: 50%;
-
+  
 }
 
 .icon + .title,
 .title + .icon
 {
-margin-left: 8px;
+  margin-left: 8px;
+}
+
+.guideBtn{
+  white-space: nowrap;
+  padding: 5px;
+  margin: 10px;
+  font-size: 1vw;
+  background-color: transparent;
+  color: var(--black);
+  border: 2px solid black;
+
+  &:hover {
+    background-color: var(--primary);
+  }
 }
 
 .menuItem{

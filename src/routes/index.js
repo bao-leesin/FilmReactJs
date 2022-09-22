@@ -1,15 +1,15 @@
-import { Component } from "react";
-import  Home  from "~/pages/Home";
-import  Auction  from "~/pages/Auction";
-import Knowledge  from "~/pages/Knowledge";
+import config from "~/config";
 
+// pages
+import Home from "~/pages/Home";
+import Guide from "~/pages/Guide";
 
+// layout
+import { HeaderOnly } from "../layouts";
 
 const publicRoutes = [
-    { path:"/" ,component: Home},
-    { path:"/Auction", component: Auction},
-    { path:"/Knowledge" ,component: Knowledge}
-
+    { path:config.routes.home ,component: Home},
+    { path:config.routes.guide, component: Guide, layout: HeaderOnly}
 ];
 
 const privateRoutes = {

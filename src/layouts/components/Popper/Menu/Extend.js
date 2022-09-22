@@ -2,6 +2,8 @@ import {  faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classNames from "classnames/bind";
 import styles from "./Menu.module.scss";
+import PropTypes from "prop-types";
+
 
 const cx = classNames.bind(styles);
 
@@ -17,9 +19,10 @@ function Extend ({title, onBack}) {
     );
 }
 
-//Tư duy bây giờ là dùng mảng, ví dụ:
-
-// [   {tên chức năng, [mảng chưa thành phần cấp dưới]}   ]
+Extend.propTypes = {
+    title: PropTypes.string,
+    onBack: PropTypes.func
+}
 
 
 

@@ -7,7 +7,7 @@
   position: fixed;
   top: 0;
   padding: 5px;
-  z-index: 1;
+  z-index: 100;
   background-color: var(--white);
   // transition: background-color .5s linear,top .25s linear;
 }
@@ -63,7 +63,7 @@
   margin: auto 0;
   font-size: 20px;
   padding: 0 10px;
-  cursor: pointer;
+  
 }
 
 .active-navbar a:hover {
@@ -76,19 +76,7 @@
   flex-direction: row;
   justify-content: center;
 
-  button {
-    display: block;
-    padding: 5px;
-    margin: 10px;
-    font-size: 20px;
-    background-color: transparent;
-    color: var(--black);
-    border: 2px solid black;
-
-    &:hover {
-      background-color: var(--primary);
-    }
-  }
+  
 }
 
 .avatar-user {
