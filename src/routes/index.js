@@ -1,15 +1,15 @@
 import config from "~/config";
 
-// pages
-import Home from "~/pages/Home";
-import Guide from "~/pages/Guide";
-
 // layout
 import { HeaderOnly } from "../layouts";
+import LoginLayout from "../layouts/LoginLayout";
+import RegisterLayout from "../layouts/RegisterLayout/RegisterLayout";
 
 const publicRoutes = [
-    { path:config.routes.home ,component: Home},
-    { path:config.routes.guide, component: Guide, layout: HeaderOnly}
+    { path:config.routes.home },
+    { path:config.routes.guide,  layout: HeaderOnly},
+    { path:config.routes.login,  layout: LoginLayout},
+    { path:config.routes.register,  layout: RegisterLayout}
 ];
 
 const privateRoutes = {

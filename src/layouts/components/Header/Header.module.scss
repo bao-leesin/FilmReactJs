@@ -8,7 +8,7 @@
   top: 0;
   padding: 5px;
   z-index: 100;
-  background-color: var(--white);
+  background-color: transparent;
   // transition: background-color .5s linear,top .25s linear;
 }
 
@@ -24,9 +24,10 @@
 
 .logo {
   width: 70px;
+  object-fit: cover;
   justify-items: flex-start;
   height: 100%;
-  margin-right:10px ;
+  background-color: transparent;
 }
 
 .search-space {

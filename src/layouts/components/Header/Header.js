@@ -65,12 +65,11 @@ function Header({search}) {
          }
          </div>
         <div className={cx("navbar")}>
-          <div className={cx("active-navbar")}>
+          {/* <div className={cx("active-navbar")}>
             <Link to="">Home</Link>
             <Link to="">Knowledge</Link>
             <Link to="">Auction</Link>
-          </div>
-
+          </div> */}
         <div className={cx('actions')}>
             {loginId ?
             (<div className={cx('header-actions')}>
@@ -79,7 +78,7 @@ function Header({search}) {
             </div>)
             :
             (
-            <Button to="/home" loginBtn>
+            <Button to={config.routes.login} loginBtn>
               Log in
             </Button>
           ) }
@@ -105,8 +104,8 @@ function Header({search}) {
     </header>
   );
 
-  Header.propTypes = {
-    search: PropTypes.bool
-  }
 }  
+Header.propTypes = {
+  search: PropTypes.bool
+}
 export default Header;

@@ -1,0 +1,66 @@
+
+.wrapper{
+    background: url(https://img6.thuthuatphanmem.vn/uploads/2022/03/16/background-cong-chieu-phim_110936640.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.container{
+width: 350px;
+
+}
+
+.form-login{
+    width: 100%;
+    background: rgba(119, 202, 228, 0.6);
+    flex-grow: 1;
+    align-items: center;
+    padding: 30px 30px 40px 40px;
+    box-shadow: 0px 0px 7px 12px rgba(236, 195, 195, 0.8);
+
+} 
+.form-heading{
+    text-align: center;
+    font-size: 2.2rem;
+    margin: 1rem auto;
+}
+.form-group{
+    margin-bottom: 1.5rem ;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+}
+
+.btn-login{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+}
+.form-input{
+    background: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 1.5rem;
+    flex-grow: 1;
+    margin: 0 10px;
+    width: 70%;
+ 
+}
+
+.media-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.eye{
+    cursor: pointer;
+}
+

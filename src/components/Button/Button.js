@@ -7,16 +7,18 @@ import styles from "./Button.module.scss";
 const cx = classNames.bind(styles);
 
 function Button({
-    loginBtn,
     leftIcon,
     rightIcon,
     disabled,
     menuItem,
-    guideBtn,
     to,
     href,
     children,
     onClick,
+    guideBtn,
+    loginBtn,
+    googleBtn,
+    facebookBtn,
     ...passProps}) {
 
     let Comp = 'button'
@@ -47,7 +49,10 @@ function Button({
     }
 
     const wrapper =cx('wrapper',
-    {loginBtn,
+    {
+    googleBtn,
+    facebookBtn,
+    loginBtn,
     disabled,
     menuItem,
     guideBtn
