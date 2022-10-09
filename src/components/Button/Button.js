@@ -13,6 +13,7 @@ function Button({
     menuItem,
     to,
     href,
+    type,
     children,
     onClick,
     guideBtn,
@@ -59,7 +60,7 @@ function Button({
     })
     
     return ( 
-        <Comp  className={wrapper} {..._props}>
+        <Comp  className={wrapper} type={type} {..._props}>
             {leftIcon && <span className={cx('icon')}> {leftIcon} </span>}
             <span className={cx('title')} > {children} </span>
             {rightIcon && <span className={cx('icon')}> {rightIcon} </span>}

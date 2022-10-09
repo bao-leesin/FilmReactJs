@@ -19,10 +19,9 @@ function Search({}) {
 
   const [typing, setTyping] = useState("");
   const [suggestions, setSuggestions] = useState([]);
-  // const [loading, setLoading] = useState(true)   --> xử lý khi focus thì không hiện nếu không có dữ liệu; 
   const searchRef = useRef();
 
-  const debounceTyping = useDebounce(typing, 500);
+  const debounceTyping = useDebounce(typing, 1000);
 
   useEffect(() => {
     if (!typing.trim()) {
@@ -54,7 +53,7 @@ function Search({}) {
         placement="bottom-start"
         visible={visible}
         onClickOutside={hideTippy}
-        render={ (attrs) => (
+        render={ (attrs) => !!typing && (
           <div className={cx("suggestion")} tabIndex="-1" {...attrs}>
             <WrapperPopper>
               {suggestions.map((suggestion) => (

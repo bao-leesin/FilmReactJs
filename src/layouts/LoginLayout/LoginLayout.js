@@ -2,6 +2,7 @@ import Header from "~/layouts/components/Header";
 import styles from "./LoginLayout.module.scss";
 import Button from "~/components/Button";
 
+import { useDebounce,Validator } from "~/hooks";
 import classNames from "classnames/bind";
 import { useState, useEffect,useRef } from "react";
 import config from "~/config";
@@ -15,13 +16,9 @@ function LoginLayout() {
   const [passwordType, setPasswordType] = useState("password");
   const [eye, setEye] = useState(faEye);
 
-  
   const userRef = useRef()
   const passwordRef = useRef()
 
-  useEffect(() => {
-
-  }, []);
 
   const handleContentPassword = () => {
     if (password) {
@@ -35,11 +32,21 @@ function LoginLayout() {
     }
   }
 
+  const setPointerEnd = (e) => {
+    let temp_value = e.target.value;
+    e.target.value = "";
+    e.target.value = temp_value;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+  }
+
   return (
     <div className={cx("wrapper")}>
       <Header />
       <div className={cx("container")}>
-        <form method="get" className={cx("form-login")}>
+        <form method="get" className={cx("form-login")} onSubmit={handleSubmit}>
           <h1 className={cx("form-heading")}>Form Log in</h1>
           <div className={cx("form-group")}>
             <FontAwesomeIcon icon={faUser}  onClick = {  () => { userRef.current.focus()} } />
@@ -47,13 +54,16 @@ function LoginLayout() {
               required
               type="text"
               className={cx("form-input")}
-              placeholder="Username"
+              placeholder="Username/Email"
               ref={userRef}
               value={username}
               onChange={(e) => {
                 setUsername(e.target.value);
               }}
-              onFocus={(e)=>e.currentTarget.setSelectionRange(e.currentTarget.value.length, e.currentTarget.value.length)}
+              onFocus={(e)=>setPointerEnd(e)}
+              onBlur={(e) => {
+                Validator.isRequired(e.currentTarget, username);
+              }}
             />
           </div>
           <div className={cx("form-group")}>
@@ -68,12 +78,15 @@ function LoginLayout() {
               onChange={(e) => {
                 setPassword(e.target.value);
               }}
-              onFocus={(e)=>e.currentTarget.setSelectionRange(e.currentTarget.value.length, e.currentTarget.value.length)}
+              onFocus={(e)=>setPointerEnd(e)}
+              onBlur={(e) => {
+                Validator.isRequired(e.currentTarget, password);
+              }}
             />
             <FontAwesomeIcon className={cx("eye")} icon={eye} onClick={handleContentPassword}/>
           </div>
           <div className={cx("btn-login")}>
-            <Button loginBtn to={config.routes.home}> Log in </Button>
+            <Button loginBtn type={'submit'}> Log in </Button>
           </div>
           <div className={cx("form-group")}>
             <Button to={config.routes.register}> Register </Button>

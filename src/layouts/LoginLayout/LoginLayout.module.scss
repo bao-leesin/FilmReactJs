@@ -35,6 +35,11 @@ width: 350px;
     align-items: flex-end;
     width: 100%;
     border-bottom: 1px solid #fff;
+
+    a:hover{
+        color: rgb(38, 130, 216);
+    }
+  
 }
 
 .btn-login{
@@ -63,4 +68,6 @@ width: 350px;
 .eye{
     cursor: pointer;
 }
+
+
 
