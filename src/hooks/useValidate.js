@@ -2,21 +2,19 @@ function Validator() {
     
 }
 
-const validate = (input,element) => {
-    !input
-    ? (element.parentElement.style.borderColor = "red")
-    : (element.parentElement.style.borderColor = "#7FFF00")
+const validate = (e,value) => {
+    !value
+    ? (e.target.parentElement.style.borderColor = "red")
+    : (e.target.parentElement.style.borderColor = "#7FFF00")
 }
 
-Validator.isRequired = (element,value) => {
-        validate (value,element)
+Validator.isRequired = (e) => {
+        validate (e,e.target.value)
 }
 
-Validator.isEmail = (element,value) =>{
+Validator.isEmail = (e) =>{
     const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-    validate (regex.test(value),element)
+    validate (e,regex.test(e.target.value))
 }
-
-
 
 export default Validator

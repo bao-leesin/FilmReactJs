@@ -62,7 +62,7 @@ function LoginLayout() {
               }}
               onFocus={(e)=>setPointerEnd(e)}
               onBlur={(e) => {
-                Validator.isRequired(e.currentTarget, username);
+                Validator.isRequired(e);
               }}
             />
           </div>
@@ -80,7 +80,7 @@ function LoginLayout() {
               }}
               onFocus={(e)=>setPointerEnd(e)}
               onBlur={(e) => {
-                Validator.isRequired(e.currentTarget, password);
+                Validator.isRequired(e);
               }}
             />
             <FontAwesomeIcon className={cx("eye")} icon={eye} onClick={handleContentPassword}/>

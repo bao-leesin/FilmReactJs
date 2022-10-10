@@ -79,7 +79,7 @@ function RegisterLayout() {
                 setPointerEnd(e);
               }}
               onBlur={(e) => {
-                Validator.isRequired(e.currentTarget, username);
+                Validator.isRequired(e);
               }}
             />
           </div>
@@ -103,7 +103,7 @@ function RegisterLayout() {
               }}
               onFocus={(e) => setPointerEnd(e)}
               onBlur={(e) => {
-                Validator.isRequired(e.currentTarget, password);
+                Validator.isRequired(e);
               }}
             />
             <FontAwesomeIcon
@@ -131,8 +131,8 @@ function RegisterLayout() {
               }}
               onFocus={setPointerEnd}
               onBlur={(e) => {
-                Validator.isRequired(e.currentTarget, email)
-                Validator.isEmail(e.currentTarget, email)
+                Validator.isRequired(e)
+                Validator.isEmail(e)
               }}
             />
           </div>
