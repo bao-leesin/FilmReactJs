@@ -30,9 +30,10 @@ function DefaultLayout({ children }) {
     return () => {window.removeEventListener('scroll',handleSearch)}
   }, []);
 
+
   return (  
     <div className={cx('wrapper')}>
-      <Header search = {searchHeader}/>
+      <Header search = {searchHeader} />
      <div className={cx('container')}>
         <div className={cx('intro')}>
           <h1>CASINO</h1>

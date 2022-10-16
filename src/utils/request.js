@@ -5,9 +5,15 @@ const request = axios.create({
     timeout: 1000
 })
 
-export const get =  async(path,option={}) => {
-    const response = await request.get(path,option)
-    return response.data
+export const get =  async(path) => {
+    try {
+        const response = await request.get(path)
+        return response
+    } catch (error) {
+        
+    }
 }
 
 export default request
+
+
