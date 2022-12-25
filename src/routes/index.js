@@ -1,6 +1,7 @@
 import config from "~/config";
 
 // layout
+
 import { HeaderOnly } from "../layouts";
 import LoginLayout from "../layouts/LoginLayout";
 import RegisterLayout from "../layouts/RegisterLayout/RegisterLayout";

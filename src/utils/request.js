@@ -7,7 +7,9 @@ const request = axios.create({
 
 export const get =  async(path,option={}) => {
     const response = await request.get(path,option)
-    return response.data
+    return response
 }
+
+
 
 export default request
