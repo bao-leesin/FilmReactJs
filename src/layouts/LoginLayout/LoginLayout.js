@@ -8,9 +8,11 @@ import { useState, useEffect,useRef } from "react";
 import config from "~/config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash, faKey, faUser } from "@fortawesome/free-solid-svg-icons";
+import { connect } from "react-redux";
+import fetchLogin from "../../store/actions/actionLogin";
 const cx = classNames.bind(styles);
 
-function LoginLayout() {
+function LoginLayout({account, action }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [passwordType, setPasswordType] = useState("password");
@@ -40,6 +42,10 @@ function LoginLayout() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    action()
+    if (account) {
+      console.log('qua ok');
+    }
   }
 
   return (
@@ -103,4 +109,14 @@ function LoginLayout() {
   );
 }
 
-export default LoginLayout;
+const mapStateToProps = (state) => {
+  return {
+   account: state.loginReducer
+   }     
+}
+
+const mapActionToProps = (dispatch) => ({
+  action: () => dispatch(fetchLogin())
+})
+
+export default connect(mapStateToProps,mapActionToProps) (LoginLayout);
