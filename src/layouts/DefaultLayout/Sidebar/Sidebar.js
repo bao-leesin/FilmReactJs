@@ -22,7 +22,7 @@ function Sidebar() {
   }
   showGenre()
   const filterList = [
-    { info: "Top", keywords: ['View,New,Rating'] },
+    { info: "Top", keywords: ['Views,New,Rating'] },
     { info: "Genre", keywords: [genre] },
     { info: "cardano" , keywords: []}
   ];

@@ -5,7 +5,7 @@ const reqLogin =  (account) => ({
     payload: account
 })
 
-const resLogin = (account) => ({
+const actionLogin = (account) => ({
     type: 'login',
     payload: account
 })
